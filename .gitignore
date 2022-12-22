@@ -108,3 +108,7 @@ build/
 
 # VS Code
 .vscode/
+
+# Gatsby
+public/
+
