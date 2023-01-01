@@ -2,13 +2,13 @@ import React from "react";
 import {
   IcTopNavigation,
   IcNavigationItem,
+  IcTypography,
 } from "@ukic/react";
 import { Link as GatsbyLink, withPrefix } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image"
 
 interface NavigationProps {
   appTitle: string;
-  status: string;
-  version: string;
 }
 
 const NavigationItem: React.FC<any> = ({ text, to, activeClassName, partiallyActive }) => (
@@ -21,23 +21,24 @@ const NavigationItem: React.FC<any> = ({ text, to, activeClassName, partiallyAct
 
 const Navigation: React.FC<NavigationProps> = ({
   appTitle,
-  status,
-  version,
 }) => (
+  <div>
   <IcTopNavigation
     appTitle={appTitle}
-    status={status}
-    version={version}
     href={withPrefix("/")}
   >
+    <span slot="app-icon">
+      <StaticImage src='../images/botgc-banner-plain.png' alt='The Band of the Gloucestershire Constabulary'/>
+    </span>
 
-    <NavigationItem key='cdinfo' text='Engagements' to='/engagements' activeClassName='active' partiallyActive={true} />
-    <NavigationItem key='cdinfo' text='Contacts' to='/contacts' activeClassName='active' partiallyActive={true} />
+    <NavigationItem key='homepage' text='Home' to='/' activeClassName='active' partiallyActive={true} />
+    <NavigationItem key='engagements' text='Engagements' to='/engagements' activeClassName='active' partiallyActive={true} />
     <NavigationItem key='cdinfo' text='CD Info' to='/cdinfo' activeClassName='active' partiallyActive={true} />
-    <NavigationItem key='cdinfo' text='Documents' to='/documents' activeClassName='active' partiallyActive={true} />
-    <NavigationItem key='cdinfo' text='Music' to='/music' activeClassName='active' partiallyActive={true} />
+    <NavigationItem key='documents' text='Documents' to='/documents' activeClassName='active' partiallyActive={true} />
+    <NavigationItem key='music' text='Music' to='/music' activeClassName='active' partiallyActive={true} />
 
   </IcTopNavigation>
+</div>
 );
 
 export default Navigation;
