@@ -12,8 +12,6 @@ export const Homepage = ({ children, pageContext }) => {
     return (
         <Layout pageContext={pageContext} >
             <div className='homepage-container'>
-                <IcTypography variant='h4'>Welcome to website of The Band of the Gloucestershire Constabulary.</IcTypography>
-
                 <div className='homepage-picture'>
                     <MainPicture />
                 </div>

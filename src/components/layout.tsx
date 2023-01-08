@@ -4,9 +4,44 @@ import { MDXProvider } from "@mdx-js/react"
 import "./layout.css";
 import Navigation from './navigation';
 import { IcFooter, IcFooterLink, IcSectionContainer, IcTypography } from '@ukic/react';
-import { Footer } from './footer';
-import { StaticImage } from "gatsby-plugin-image"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
+const Header = () => {
+    return (<header className='header'>
+        <Navigation appTitle='The Band of the Glouestershire Constabulary' />
+    </header>);
+}
+
+const Main = ({ children, pageContext }) => {
+    return (
+    <main id="main" className="main-container">
+        <IcSectionContainer className='main-content' aligned="center" fullHeight>
+            <IcTypography variant='h2'>{pageContext.frontmatter.title}</IcTypography>
+            {children}
+        </IcSectionContainer>
+    </main>
+    );
+}
+
+const Footer = () => {
+    return (
+        <footer className="footer">
+            <IcFooter
+                copyright={false}
+            >
+                <span slot='description'>
+                    <IcTypography>For more infomation about the Band or to make a booking enquiry, please contact us at <IcFooterLink href="mailto:secretary@glospoliceband.org">secretary@glospoliceband.org</IcFooterLink></IcTypography>
+                    <IcTypography>Find us on Facebook: <IcFooterLink href="https://www.facebook.com/glospoliceband">https://www.facebook.com/glospoliceband</IcFooterLink></IcTypography>
+                    <IcTypography>Comments or issues with this website please contact <IcFooterLink href="mailto:webadmin@glospoliceband.org">webadmin@glospoliceband.org</IcFooterLink>.</IcTypography>
+                </span>
+                <span slot="caption" className="footer-copyright">
+                    <IcTypography
+                        variant="label-uppercase">
+                        &copy; The Band of the Gloucestershire 2022
+                    </IcTypography>
+                </span>
+            </IcFooter>
+        </footer>);
+}
 
 export const Layout = ({ children, pageContext }) => {
     return (
@@ -21,33 +56,11 @@ export const Layout = ({ children, pageContext }) => {
                 p: props => <IcTypography variant="body" className="text-content" applyVerticalMargins {...props} />
             }}
         >
-
-            <header className='header'>
-                <Navigation appTitle='The Band of the Glouestershire Constabulary' />
-            </header>
-
-            <main id="main" className="main-container">
-                <IcSectionContainer className='main-content' aligned="center" fullHeight>
-                    {children}
-                </IcSectionContainer>
-            </main>
-
-            <footer className="footer">
-                <IcFooter
-                    copyright={false}
-                >
-                    <span slot='description'>
-                        <IcTypography>For more infomation about the Band or to make a booking enquiry, please contact us at <IcFooterLink href="mailto:secretary@glospoliceband.org">secretary@glospoliceband.org</IcFooterLink></IcTypography>
-                        <IcTypography>Find us on Facebook: <IcFooterLink href="https://www.facebook.com/glospoliceband">https://www.facebook.com/glospoliceband</IcFooterLink></IcTypography>
-                        <IcTypography>Comments or issues with this website please contact <IcFooterLink href="mailto:webadmin@glospoliceband.org">webadmin@glospoliceband.org</IcFooterLink>.</IcTypography>
-                    </span>
-                    <span slot="caption" className="footer-copyright">
-                        <IcTypography
-                            variant="label-uppercase">
-                            &copy; The Band of the Gloucestershire 2022
-                        </IcTypography>
-                    </span>
-                </IcFooter>            </footer>
+            <Header />
+            <Main pageContext={pageContext}>
+                {children}
+            </Main>
+            <Footer />
         </MDXProvider>
     )
 }

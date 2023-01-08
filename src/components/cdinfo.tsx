@@ -10,7 +10,10 @@ const MainPicture = () => (<StaticImage src='../images/cd_cover.png' alt='A Nigh
 
 const Track = ({ number, track }) => {
     return (
-        <li key={number}>{track.name} : {track.composer}</li>
+        <li key={number}>
+            <IcTypography variant='body' className='cdinfo-track-name'>{track.name}</IcTypography>
+            <IcTypography variant='body' className='cdinfo-track-composer'>{track.composer}</IcTypography>
+        </li>
     );
 }
 

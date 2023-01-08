@@ -1,0 +1,22 @@
+Name            	Type	TTL	Priority	Content
+
+glospoliceband.org	A	86400	-	185.199.108.153
+glospoliceband.org	A	86400	-	185.199.109.153
+glospoliceband.org	A	86400	-	185.199.110.153
+glospoliceband.org	A	86400	-	185.199.111.153
+
+glospoliceband.org	AAAA	86400	-	2606:50c0:8000::153
+glospoliceband.org	AAAA	86400	-	2606:50c0:8001::153
+glospoliceband.org	AAAA	86400	-	2606:50c0:8002::153
+glospoliceband.org	AAAA	86400	-	2606:50c0:8003::153	
+
+www.glospoliceband.org	CNAME	86400	-	glospoliceband.org
+
+glospoliceband.org	MX	86400	0	mx1.forwardemail.net.
+glospoliceband.org	MX	86400	0	mx2.forwardemail.net.
+
+glospoliceband.org	TXT	86400	-	"v=spf1 a mx ptr include:secureserver.net all"
+glospoliceband.org	TXT	86400	-	forward-email=glospoliceband@gmail.com
+
+_github-pages-challenge-glospoliceband.glospoliceband.org	TXT	86400	-	c5371cc74922384a7e719fa0f78830
+
