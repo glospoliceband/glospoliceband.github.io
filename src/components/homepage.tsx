@@ -6,7 +6,11 @@ import { IcTypography } from '@ukic/react';
 
 import { Layout } from './layout';
 
-const MainPicture = () => (<StaticImage src='../images/glospoliceband_cheltenham_20161114.jpg' alt='The Band of the Gloucestershire Constabulary at Cheltenham Festival of Rememberance, 2016' />);
+const MainPicture = () => (
+    <StaticImage
+        src='../images/glospoliceband_cheltenham_20161114.jpg'
+        alt='The Band of the Gloucestershire Constabulary at Cheltenham Festival of Rememberance, 2016'
+    />);
 
 export const Homepage = ({ children, pageContext }) => {
     return (
