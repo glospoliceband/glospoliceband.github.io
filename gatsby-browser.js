@@ -1,12 +1,3 @@
-import "@ukic/fonts/dist/fonts.css";
-import "@ukic/web-components/dist/core/core.css";
-import "./src/styles/gatsby-reset.css";
-import "./src/styles/gatsby-override.css";
-
-const { defineCustomElements } = require("@ukic/web-components/loader");
-
-defineCustomElements();
-
 // eslint-disable-next-line import/prefer-default-export
 export const onInitialClientRender = () => {
   /**

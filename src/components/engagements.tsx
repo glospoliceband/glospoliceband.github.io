@@ -2,8 +2,6 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { IcTypography } from '@ukic/react';
 
-import { Layout } from './layout';
-
 const fetchData = async (setData, setError, setLoading) => {
     fetch("https://www.muzodo.com/api/v1/group/BA71404D-C196-A266-2BBF-0A6C705FDB4C/events?displayFrom")
         .then(res => res.json())
@@ -28,7 +26,15 @@ const fetchData = async (setData, setError, setLoading) => {
 };
 
 
-const EngagementsTable = ({ data, loading, error }) => {
+export const EngagementsTable = () => {
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState("");
+
+    useEffect(() => {
+        fetchData(setData, setError, setLoading);
+    }, []);
+
     if (loading) {
         return (
             <IcTypography variant='body'>Loading ...</IcTypography>
@@ -66,26 +72,3 @@ const EngagementsTable = ({ data, loading, error }) => {
         </table>
     );
 };
-
-export const Engagements = ({ children, pageContext }) => {
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState("");
-
-    useEffect(() => {
-        fetchData(setData, setError, setLoading);
-    }, []);
-
-    return (
-        <Layout pageContext={pageContext} >
-            <div className='engagements-container'>
-                <div className='engagements-description'>
-                    {children}
-                </div>
-                <div className='engagements-table'>
-                    <EngagementsTable data={data} error={error} loading={loading} />
-                </div>
-            </div>
-        </Layout>
-    );
-}

@@ -1,50 +1,46 @@
 import * as React from 'react';
 
-import { StaticImage } from "gatsby-plugin-image"
-
 import { IcTypography } from '@ukic/react';
 
-import { Layout } from './layout';
+import { CdCover } from '../images/CdCover';
 
-const MainPicture = () => (<StaticImage src='../images/cd_cover.png' alt='A Night at the MoviesA Night at the Movies' />);
+interface TrackProps {
+    number: number;
+    name: string;
+    composer: string;
+};
 
-const Track = ({ number, track }) => {
+interface TracksProps {
+    tracks: TrackProps[];
+}
+
+
+const Track = ({ number, name, composer }: TrackProps) => {
     return (
         <li key={number}>
-            <IcTypography variant='body' className='cdinfo-track-name'>{track.name}</IcTypography>
-            <IcTypography variant='body' className='cdinfo-track-composer'>{track.composer}</IcTypography>
+            <IcTypography variant='body' className='cdinfo-track-name'>{name}</IcTypography>
+            <IcTypography variant='body' className='cdinfo-track-composer'>{composer}</IcTypography>
         </li>
     );
 }
 
-const TrackListing = ({ tracks }) => {
+const TrackListing = ({ tracks }: TracksProps) => {
     return (
         <ol>
-            {tracks.map((track, key) => (
-                <Track number={key} track={track} />
-                // <li key={key}><IcTypography variant='body'>{track.name} : {track.composer}</IcTypography></li>
-                // <IcTypography variant='body'>{key} - {track.name} : {track.composer}</IcTypography>
-                ))}
+            {tracks.map((track) => (
+                <Track number={track.number} name={track.name} composer={track.composer} />
+            ))}
         </ol>
-        );
-}
-
-export const CdInfo = ({ children, pageContext }) => {
-    const tracks = pageContext.frontmatter.tracks;
-
-    return (
-        <Layout pageContext={pageContext} >
-            <div className='cdinfo-container'>
-                <div className='cdinfo-description'>
-                    {children}
-                </div>
-                <div className='cdinfo-picture'>
-                    <MainPicture />
-                </div>
-                <div className='cdinfo-tracks'>
-                    <TrackListing tracks={tracks} />
-                </div>
-            </div>
-        </Layout>
     );
 }
+
+export const CdInfo = ({ tracks }: TracksProps) => (
+    <div className='cdinfo-container'>
+        <div className='cdinfo-picture'>
+            <CdCover />
+        </div>
+        <div className='cdinfo-tracks'>
+            <TrackListing tracks={tracks} />
+        </div>
+    </div>
+);
