@@ -1,13 +1,26 @@
 @import "@ukic/fonts/dist/fonts.css";
 @import "@ukic/react/dist/core/core.css";
 
+/* :root {
+  --ic-theme-primary-r: 85;
+  --ic-theme-primary-g: 108;
+  --ic-theme-primary-b: 180;
+} */
+
 /*
- * Layout
+ * Layout - Header
  */
 
-/* .header {} */
+.header-container {
+  width: 100;
+}
 
-/* .footer {} */
+/*
+ * Layout - Footer
+ */
+.footer-container {
+  width: 100;
+}
 
 .footer-description {
   display: flex;
@@ -37,6 +50,9 @@
   margin-left: auto;
 }
 
+/*
+ * Layout - Main
+ */
 .main-container {
   display: flex;
   flex-direction: column;
@@ -46,27 +62,7 @@
 
 .main-content {
   flex: 1;
-  display: center;
-}
-
-/*
- * Home Page
- */
-.homepage-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.homepage-welcome {
-  margin: auto;
-}
-
-.homepage-picture {
-  margin: auto;
-}
-
-.homepage-content {
-  margin: auto;
+  max-width: 1000px;
 }
 
 /* 
@@ -75,16 +71,12 @@
 .cdinfo-container {
   display: flex;
   flex-wrap: wrap;
-  }
-
-.cdinfo-description {
-  margin: auto;
 }
 
 .cdinfo-picture {
   margin: auto;
   margin-top: 0%;
-  object-position: center top;  
+  object-position: center top;
 }
 
 .cdinfo-tracks {
@@ -101,5 +93,36 @@
   color: var(--ic-color-secondary-text);
 }
 
+/*
+ * Engagemens Page
+ */
+.engagements-table {
+  width: 100%;
+  text-align: left;
+}
+
+/* .engagements-table-header{} */
+/* .engagements-table-row{} */
+/* .engagements-table-eventDate{} */
+/* .engagements-table-eventStartTime{} */
+/* .engagements-table-eventEndTime{} */
+/* .engagements-table-eventName{} */
+/* .engagements-table-eventAddress{} */
+/* .engagements-table-eventMapUrl{} */
+
+/*
+ * Music Page
+ */
+.music-table {
+  width: 100%;
+  text-align: left;
+}
+
+/* .music-table-header{} */
+/* .music-table-row{} */
+/* .music-table-number{} */
+/* .music-table-title{} */
+/* .music-table-composer{} */
+/* .music-table-notes{} */
 
 /***********/

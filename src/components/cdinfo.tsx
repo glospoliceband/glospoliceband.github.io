@@ -5,6 +5,7 @@ import { IcTypography } from '@ukic/react';
 import { CdCover } from '../images/CdCover';
 
 interface TrackProps {
+    key: number;
     number: number;
     name: string;
     composer: string;
@@ -27,8 +28,8 @@ const Track = ({ number, name, composer }: TrackProps) => {
 const TrackListing = ({ tracks }: TracksProps) => {
     return (
         <ol>
-            {tracks.map((track) => (
-                <Track number={track.number} name={track.name} composer={track.composer} />
+            {tracks.map((track, key) => (
+                <Track key={key} number={track.number} name={track.name} composer={track.composer} />
             ))}
         </ol>
     );
