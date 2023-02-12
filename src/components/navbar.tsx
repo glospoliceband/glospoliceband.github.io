@@ -2,8 +2,8 @@ import React, { Fragment } from "react";
 
 import { Link } from "gatsby";
 
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Menu, Transition } from '@headlessui/react'
+import { Bars3Icon } from '@heroicons/react/24/outline'
 
 const navigation = [
     { name: 'Home', href: '/', slug: 'homepage' },
@@ -62,7 +62,7 @@ export const Navbar = ({slug}) => (
                     key={item.name}
                     to={item.href}
                     className={classNames(
-                        slug === item.slug ? 'bg-sky-500 text-gray-700' : 'text-gray-700 hover:bg-sky-300 hover:text-gray-700',
+                        slug === item.slug ? 'bg-sky-300 text-gray-100' : 'text-gray-100 hover:bg-sky-300 hover:text-gray-700',
                         'px-3 py-2 rounded-md text-sm'
                     )}
                     aria-current={slug === item.slug ? 'page' : undefined}

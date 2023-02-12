@@ -13,6 +13,7 @@ export const FindUsOnFacebook = () => (
     <StaticImage
         src='../images/FindUs-FB-RGB.svg'
         alt='Find Us on Facebook'
+        height={30}
         />
 );
 
@@ -20,5 +21,12 @@ export const GlosPoliceBand = () => (
     <StaticImage
         src='../images/glospoliceband_cheltenham_20161114.jpg'
         alt='The Band of the Gloucestershire Constabulary, Cheltenham 14/11/2016'
+        />
+);
+
+export const BotgcBanner = () => (
+    <StaticImage
+        src='../images/botgc-banner-plain.png'
+        alt='The Band of the Gloucestershire Constabulary'
         />
 );
