@@ -1,6 +1,0 @@
-Forward Email - https://forwardemail.net/
-
-DNS TXT - forward-email=glospoliceband@gmail.com
-DNS MX - mx1.forwardemail.net.
-DNS MX - mx2.forwardemail.net.
-

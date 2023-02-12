@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { IcTypography } from '@ukic/react';
+import { CdCover } from './images';
 
-import { CdCover } from '../images/CdCover';
+import { Typography} from './typography';
 
 interface TrackProps {
     key: number;
@@ -19,8 +19,8 @@ interface TracksProps {
 const Track = ({ number, name, composer }: TrackProps) => {
     return (
         <li key={number}>
-            <IcTypography variant='body' className='cdinfo-track-name'>{name}</IcTypography>
-            <IcTypography variant='body' className='cdinfo-track-composer'>{composer}</IcTypography>
+            <Typography variant='body' className='cdinfo-track-name'>{name}</Typography>
+            <Typography variant='body' className='cdinfo-track-composer'>{composer}</Typography>
         </li>
     );
 }

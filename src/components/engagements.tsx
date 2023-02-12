@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import { IcTypography } from '@ukic/react';
+import { Typography } from './typography';
 
 interface MuzodoEvent {
     GUID: string;
@@ -51,13 +51,13 @@ export const EngagementsTable: React.FC = () => {
 
     if (loading) {
         return (
-            <IcTypography variant='body'>Loading ...</IcTypography>
+            <Typography variant='body'>Loading ...</Typography>
         );
     }
 
     if (error) {
         return (
-            <IcTypography variant='body'>Error: {error}</IcTypography>
+            <Typography variant='body'>Error: {error}</Typography>
         );
     }
 

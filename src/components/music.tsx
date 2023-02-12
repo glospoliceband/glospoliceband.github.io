@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { IcTypography } from '@ukic/react';
-
 import musicDatabase from '../data/band_library_2017-10-15.json';
+
+import { Typography } from './typography.tsx';
 
 export const MusicTable: React.FC = () => {
     return (
@@ -19,25 +19,25 @@ export const MusicTable: React.FC = () => {
                 {musicDatabase.map((piece, key) => (
                     <tr className='music-table-row' key={key}>
                         <td className='music-table-number'>
-                            <IcTypography variant='body'>
+                            <Typography variant='body'>
                                 {piece.number}
-                            </IcTypography>
+                            </Typography>
                         </td>
                         <td className='music-table-title'>
-                            <IcTypography variant='body'>
+                            <Typography variant='body'>
                                 {piece.title}
-                            </IcTypography>
+                            </Typography>
                         </td>
                         <td className='music-table-composer'>
-                            <IcTypography>{piece.composer}</IcTypography>
+                            <Typography>{piece.composer}</Typography>
                             {piece.arranger &&
-                                <IcTypography>Arr: {piece.arranger}</IcTypography>
+                                <Typography>Arr: {piece.arranger}</Typography>
                             }
                         </td>
                         <td className='music-table-notes'>
-                            <IcTypography>
+                            <Typography>
                                 {piece.notes}
-                            </IcTypography>
+                            </Typography>
                         </td>
                     </tr>
                 ))}
