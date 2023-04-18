@@ -69,7 +69,9 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
+.env.local
 .env.*.local
+
 # .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
@@ -86,7 +88,8 @@ dist
 .cache/
 # Comment in the public line in if your project uses Gatsby and *not* Next.js
 # https://nextjs.org/blog/next-9-1#public-directory-support
-# public
+public
+src/gatsby-types.d.ts
 
 # vuepress build output
 .vuepress/dist
@@ -108,3 +111,7 @@ build/
 
 # VS Code
 .vscode/
+
+# Gatsby
+public/
+
