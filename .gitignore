@@ -115,3 +115,5 @@ build/
 # Gatsby
 public/
 
+# Mac
+.DS_Store
