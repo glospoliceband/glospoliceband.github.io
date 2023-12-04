@@ -82,9 +82,9 @@ export const NavigationBar = ({ slug }: NavigationProps) => (
             to={item.href}
             className={classNames(
               slug === item.slug
-                ? "bg-sky-300 text-gray-100"
-                : "text-gray-100 hover:bg-sky-300 hover:text-gray-700",
-              "px-3 py-2 rounded-md text-sm"
+                ? "border-2"
+                : "hover:border-2 hover:border-dashed",
+              "px-3 py-2 rounded-md text-sm text-gray-100"
             )}
             aria-current={slug === item.slug ? "page" : undefined}
           >

@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        botgc: "#556cd6",
+        botgc: "#2E45BD",
       },
     },
   },

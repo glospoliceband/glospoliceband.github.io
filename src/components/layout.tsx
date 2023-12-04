@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from "react";
 import type { PageProps } from "gatsby";
 
 import { NavigationBar, NavigationMenu } from "./navigation";
-import { BotgcBanner, FindUsOnFacebook } from "./images";
+import { FindUsOnFacebook } from "./images";
 
 interface NoProps {}
 
@@ -28,7 +28,6 @@ const FooterContainer = ({ children }: PropsWithChildren<NoProps>) => (
 
 const HeaderLarge = ({ slug }: HeaderProps) => (
   <HeaderContainer>
-    <BotgcBanner />
     <BannerColour>
       <NavigationBar slug={slug} />
     </BannerColour>
@@ -37,7 +36,6 @@ const HeaderLarge = ({ slug }: HeaderProps) => (
 
 const HeaderSmall = ({ slug }: HeaderProps) => (
   <HeaderContainer>
-    <BotgcBanner />
     <BannerColour>
       <NavigationMenu slug={slug} />
     </BannerColour>
