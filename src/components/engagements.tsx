@@ -1,4 +1,5 @@
-import { Disclosure } from "@headlessui/react";
+"use client";
+
 import React from "react";
 import { useEffect, useState } from "react";
 
@@ -20,10 +21,10 @@ interface MuzodoEvent {
 const fetchData = async (
   setData: (data: MuzodoEvent[]) => void,
   setError: (error: string) => void,
-  setLoading: (loading: boolean) => void
+  setLoading: (loading: boolean) => void,
 ) => {
   fetch(
-    `https://www.muzodo.com/api/v1/group/BA71404D-C196-A266-2BBF-0A6C705FDB4C/events?displayFrom`
+    `https://www.muzodo.com/api/v1/group/BA71404D-C196-A266-2BBF-0A6C705FDB4C/events?displayFrom`,
   )
     .then((res) => res.json())
     .then(
@@ -42,7 +43,7 @@ const fetchData = async (
       (error) => {
         setError(error);
         setLoading(false);
-      }
+      },
     );
 };
 
@@ -80,7 +81,7 @@ const EngagementsTable = ({ engagements }: EngagementsTableProperties) => (
 const EngagementsList = ({ engagements }: EngagementsTableProperties) => (
   <ul className="list-none">
     {engagements.map((event: MuzodoEvent) => (
-      <li>
+      <li key={event.GUID}>
         <h2 className="text-sm">
           {event.FormattedDate} - {event.Name}
         </h2>

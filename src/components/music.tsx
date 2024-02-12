@@ -1,9 +1,9 @@
+"use client";
+
 import { Disclosure } from "@headlessui/react";
 import * as React from "react";
 
-import musicDatabase from "../data/band_library_2017-10-15.json";
-
-import { Typography } from "./typography.tsx";
+import musicDatabase from "@/data/band_library_2017-10-15.json";
 
 const MusicTable = () => (
   <table className="music-table">
@@ -19,17 +19,17 @@ const MusicTable = () => (
       {musicDatabase.map((piece, key) => (
         <tr key={key}>
           <td>
-            <Typography variant="body">{piece.number}</Typography>
+            <p>{piece.number}</p>
           </td>
           <td>
-            <Typography variant="body">{piece.title}</Typography>
+            <p>{piece.title}</p>
           </td>
           <td>
-            <Typography>{piece.composer}</Typography>
-            {piece.arranger && <Typography>Arr: {piece.arranger}</Typography>}
+            <p>{piece.composer}</p>
+            {piece.arranger && <p>Arr: {piece.arranger}</p>}
           </td>
           <td>
-            <Typography>{piece.notes}</Typography>
+            <p>{piece.notes}</p>
           </td>
         </tr>
       ))}

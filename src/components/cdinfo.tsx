@@ -1,18 +1,14 @@
 import * as React from "react";
 import { CdCover } from "./images";
 
-interface TrackProps {
+interface TrackInfo {
   key: number;
   number: number;
   name: string;
   composer: string;
 }
 
-interface TracksProps {
-  tracks: TrackProps[];
-}
-
-const Track = ({ number, name, composer }: TrackProps) => {
+const Track = ({ number, name, composer }: TrackInfo) => {
   return (
     <li key={number}>
       <p className="mb-0">{name}</p>
@@ -21,7 +17,7 @@ const Track = ({ number, name, composer }: TrackProps) => {
   );
 };
 
-export const TrackListing = ({ tracks }: TracksProps) => {
+export const TrackListing = ({ tracks }: { tracks: TrackInfo[] }) => {
   return (
     <ol>
       {tracks.map((track, key) => (
@@ -36,7 +32,7 @@ export const TrackListing = ({ tracks }: TracksProps) => {
   );
 };
 
-export const CdInfo = ({ tracks }: TracksProps) => {
+export const CdInfo = ({ tracks }: { tracks: TrackInfo[] }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2">
       <div>
