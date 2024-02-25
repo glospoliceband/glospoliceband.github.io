@@ -16,6 +16,9 @@ const nextConfig = {
   // Optional: Change the output directory `out` -> `dist`
   // distDir: 'dist',
 
+  // disable image optimization for use in a static site
+  images: { unoptimized: true },
+  
   // Optionally, add any other Next.js config below
 };
 
