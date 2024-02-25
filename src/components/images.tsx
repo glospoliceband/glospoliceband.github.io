@@ -1,29 +1,28 @@
 import * as React from "react";
 
-import { StaticImage } from "gatsby-plugin-image";
+import Image from "next/image";
 
-export const CdCover = () => (
-  <StaticImage src="../images/cd_cover.png" alt="CD Cover" />
-);
+import CdCoverSrc from "@/images/cd_cover.png";
+import FindUsOnFacebookSrc from "@/images/FindUs-FB-RGB-Wht.svg";
+import GlosPoliceBandSrc from "@/images/glospoliceband_cheltenham_20161114.jpg";
+import BotgcBannerSrc from "@/images/botgc-banner-plain.png";
+
+export const CdCover = () => <Image src={CdCoverSrc} alt="CD Cover" />;
 
 export const FindUsOnFacebook = () => (
-  <StaticImage
-    src="../images/FindUs-FB-RGB-Wht.svg"
-    alt="Find Us on Facebook"
-    height={30}
-  />
+  <Image src={FindUsOnFacebookSrc} alt="Find Us on Facebook" height={30} />
 );
 
 export const GlosPoliceBand = () => (
-  <StaticImage
-    src="../images/glospoliceband_cheltenham_20161114.jpg"
+  <Image
+    src={GlosPoliceBandSrc}
     alt="The Band of the Gloucestershire Constabulary, Cheltenham 14/11/2016"
   />
 );
 
 export const BotgcBanner = () => (
-  <StaticImage
-    src="../images/botgc-banner-plain.png"
+  <Image
+    src={BotgcBannerSrc}
     alt="The Band of the Gloucestershire Constabulary"
   />
 );
