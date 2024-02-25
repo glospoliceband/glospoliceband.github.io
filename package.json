@@ -15,7 +15,7 @@
     "lint": "next lint",
     "prettier:check": "prettier --check .",
     "prettier:fix": "prettier --write --list-different .",
-    "deploy": "gh-pages -d out"
+    "deploy": "gh-pages -d out --nojekyll"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
