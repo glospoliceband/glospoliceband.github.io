@@ -1,18 +1,15 @@
-"use client";
-
-import { Disclosure } from "@headlessui/react";
 import * as React from "react";
 
-import musicDatabase from "@/data/band_library_2017-10-15.json";
+import musicDatabase from "@/data/band_library_2023-09.json";
 
-const MusicTable = () => (
-  <table className="music-table">
+export const Music = () => (
+  <table className="table-auto">
     <thead>
-      <tr className="music-table-header">
+      <tr>
         <th>Number</th>
         <th>Title</th>
         <th>Composer</th>
-        <th>Notes</th>
+        <th className="hidden md:block">Notes</th>
       </tr>
     </thead>
     <tbody>
@@ -28,7 +25,7 @@ const MusicTable = () => (
             <p>{piece.composer}</p>
             {piece.arranger && <p>Arr: {piece.arranger}</p>}
           </td>
-          <td>
+          <td className="hidden md:block">
             <p>{piece.notes}</p>
           </td>
         </tr>
@@ -36,35 +33,3 @@ const MusicTable = () => (
     </tbody>
   </table>
 );
-
-const MusicList = () => (
-  <ul>
-    {musicDatabase.map((piece, key) => (
-      <li key={key}>
-        <Disclosure>
-          <Disclosure.Button className="py-2">
-            {piece.number} - {piece.title}
-          </Disclosure.Button>
-          <Disclosure.Panel className="text-gray-500">
-            <p>{piece.composer}</p>
-            {piece.arranger && <p>Arr: {piece.arranger}</p>}
-            <p>{piece.notes}</p>
-          </Disclosure.Panel>
-        </Disclosure>
-      </li>
-    ))}
-  </ul>
-);
-
-export const Music = () => {
-  return (
-    <>
-      <div className="block md:hidden">
-        <MusicList />
-      </div>
-      <div className="hidden md:block">
-        <MusicTable />
-      </div>
-    </>
-  );
-};

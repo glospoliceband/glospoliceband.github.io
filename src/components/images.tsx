@@ -6,10 +6,17 @@ import CdCoverSrc from "@/images/cd_cover.png";
 import FindUsOnFacebookSrc from "@/images/FindUs-FB-RGB-Wht.svg";
 import GlosPoliceBandSrc from "@/images/glospoliceband_cheltenham_20161114.jpg";
 
-export const CdCover = () => <Image src={CdCoverSrc} alt="CD Cover" width={456} height={444}/>;
+export const CdCover = () => (
+  <Image src={CdCoverSrc} alt="CD Cover" width={456} height={444} />
+);
 
 export const FindUsOnFacebook = () => (
-  <Image src={FindUsOnFacebookSrc} alt="Find Us on Facebook" width={157} height={30} />
+  <Image
+    src={FindUsOnFacebookSrc}
+    alt="Find Us on Facebook"
+    width={157}
+    height={30}
+  />
 );
 
 export const GlosPoliceBand = () => (
