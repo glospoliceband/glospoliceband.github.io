@@ -18,7 +18,7 @@ const nextConfig = {
 
   // disable image optimization for use in a static site
   images: { unoptimized: true },
-  
+
   // Optionally, add any other Next.js config below
 };
 
