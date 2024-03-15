@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import musicDatabase from "@/data/band_library_2023-09.json";
 
 export const Music = () => (

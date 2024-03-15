@@ -1,0 +1,1 @@
+export { GlosPoliceBand } from "./GlosPoliceBand";
