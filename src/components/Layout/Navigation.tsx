@@ -22,7 +22,7 @@ export const Navigation = () => {
   return (
     <nav className="w-full flex items-center justify-between">
       <Link href="/" className="font-small text-xl md:font-medium md:text-2xl">
-        The Band of the Gloucestershire Constabulary
+        Gloucestershire Police Band
       </Link>
       <div className="md:hidden">
         <NavigationMenu navigation={navigation} />
