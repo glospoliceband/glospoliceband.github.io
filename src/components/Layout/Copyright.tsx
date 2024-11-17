@@ -4,7 +4,7 @@ export const Copyright = () => (
   <p>
     © {new Date().getFullYear()}{" "}
     <Link href="/" className="hover:underline">
-      The Band of the Gloucestershire Constabulary
+      Gloucestershire Police Band
     </Link>
     .
   </p>

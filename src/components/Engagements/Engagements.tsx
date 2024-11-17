@@ -54,13 +54,15 @@ export const Engagements = () => {
     return <p>Error: {error}</p>;
   }
 
+  const publicEvents = data.filter((event) => event.EventType === "PUBLIC");
+
   return (
     <>
       <div className="block md:hidden">
-        <EngagementsList engagements={data} />
+        <EngagementsList engagements={publicEvents} />
       </div>
       <div className="hidden md:block">
-        <EngagementsTable engagements={data} />
+        <EngagementsTable engagements={publicEvents} />
       </div>
     </>
   );
