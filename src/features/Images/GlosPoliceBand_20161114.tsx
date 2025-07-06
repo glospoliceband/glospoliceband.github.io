@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import GlosPoliceBandSrc from "@/images/glospoliceband_cheltenham_20161114.jpg";
 
-export const GlosPoliceBand = () => (
+export const GlosPoliceBand_20161114 = () => (
   <Image
     src={GlosPoliceBandSrc}
     alt="The Gloucestershire Police Band, Cheltenham 14/11/2016"

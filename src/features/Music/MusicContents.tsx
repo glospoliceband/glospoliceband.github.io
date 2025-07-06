@@ -1,6 +1,6 @@
 import musicDatabase from "@/data/band_library_2023-09.json";
 
-export const Music = () => (
+export const MusicContents = () => (
   <table className="table-auto">
     <thead>
       <tr>

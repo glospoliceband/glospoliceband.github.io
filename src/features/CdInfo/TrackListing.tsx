@@ -1,4 +1,6 @@
-export const tracks = [
+import { Track } from "./Track";
+
+const TRACKS = [
   {
     number: 1,
     name: "Ben-Hur",
@@ -71,14 +73,18 @@ export const tracks = [
   },
 ];
 
-import { CdInfo } from "@/components/CdInfo";
 
-# A Night at the Movies
-
-The Gloucestershire Police Band is pleased to anounce the release of our latest CD, A Night at the Movies.
-
-The band's new CD invites you to enjoy a night at the movies with a collection of tunes from classic films of the last 70 years.
-
-The CD costs £5 (UK postage £2) and is available at all of our concerts or please contact us at <a href="mailto:sales@glospoliceband.org">sales@glospoliceband.org</a>.
-
-<CdInfo tracks={tracks} />
+export const TrackListing = () => {
+  return (
+    <ol>
+      {TRACKS.map((track, key) => (
+        <Track
+          key={key}
+          number={track.number}
+          name={track.name}
+          composer={track.composer}
+        />
+      ))}
+    </ol>
+  );
+};

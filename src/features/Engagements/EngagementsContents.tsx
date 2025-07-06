@@ -37,7 +37,7 @@ const fetchData = async (
     );
 };
 
-export const Engagements = () => {
+export const EngagementsContents = () => {
   const [data, setData] = useState([] as MuzodoEvent[]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");

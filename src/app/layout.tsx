@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-import { GlosPoliceBand } from "@/components/Layout";
+import { GlosPoliceBand } from "@/features/Layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
