@@ -1,6 +1,11 @@
-import type { TrackInfo } from "./TrackInfo";
+export interface TrackProperties {
+  key: number;
+  number: number;
+  name: string;
+  composer: string;
+}
 
-export const Track = ({ number, name, composer }: TrackInfo) => {
+export const Track = ({ number, name, composer }: TrackProperties) => {
   return (
     <li key={number}>
       <p className="mb-0">{name}</p>
