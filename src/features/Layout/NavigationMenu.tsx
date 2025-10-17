@@ -1,10 +1,10 @@
-import React, { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { FaBars } from "react-icons/fa";
-import { classNames } from "./utils";
 import Link from "next/link";
+import React, { Fragment } from "react";
+import { FaBars } from "react-icons/fa";
 
 import type { NavigationInfo } from "./NavigationInfo";
+import { classNames } from "./utils";
 
 export const NavigationMenu = ({
   navigation,

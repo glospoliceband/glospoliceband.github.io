@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import CdCoverSrc from "@/images/cd_cover.png";
 
 export const CdCover = () => (

@@ -1,5 +1,6 @@
-import { NavigationInfo } from "./NavigationInfo";
 import Link from "next/link";
+
+import { NavigationInfo } from "./NavigationInfo";
 import { classNames } from "./utils";
 
 export const NavigationBar = ({

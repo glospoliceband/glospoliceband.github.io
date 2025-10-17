@@ -1,5 +1,5 @@
-import type { MuzodoEvent } from "./MuzodoEvent";
 import type { EngagementsTableProperties } from "./EngagementsTableProperties";
+import type { MuzodoEvent } from "./MuzodoEvent";
 
 export const EngagementsList = ({
   engagements,

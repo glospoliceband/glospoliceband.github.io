@@ -1,5 +1,6 @@
-import { MainPageIntro } from "./MainPageIntro";
 import { GlosPoliceBand_20161114 } from "@/features/Images";
+
+import { MainPageIntro } from "./MainPageIntro";
 import { MainPageText } from "./MainPageText";
 
 export const MainPage = () => (

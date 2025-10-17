@@ -3,10 +3,9 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-import type { MuzodoEvent } from "./MuzodoEvent";
-
-import { EngagementsTable } from "./EngagementsTable";
 import { EngagementsList } from "./EngagementsList";
+import { EngagementsTable } from "./EngagementsTable";
+import type { MuzodoEvent } from "./MuzodoEvent";
 
 const fetchData = async (
   setData: (data: MuzodoEvent[]) => void,
