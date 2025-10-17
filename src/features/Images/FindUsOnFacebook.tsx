@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import FindUsOnFacebookSrc from "@/images/FindUs-FB-RGB-Wht.svg";
 
 export const FindUsOnFacebook = () => (

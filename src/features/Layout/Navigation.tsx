@@ -1,10 +1,11 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import type { NavigationInfo } from "./NavigationInfo";
 import Link from "next/link";
-import { NavigationMenu } from "./NavigationMenu";
+import { usePathname } from "next/navigation";
+
 import { NavigationBar } from "./NavigationBar";
+import type { NavigationInfo } from "./NavigationInfo";
+import { NavigationMenu } from "./NavigationMenu";
 
 const navigation: NavigationInfo[] = [
   { key: 1, name: "Home", href: "/" },
