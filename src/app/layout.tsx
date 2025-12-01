@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import { FacebookProvider } from "@/features/Facebook";
 import { GlosPoliceBand } from "@/features/Layout";
 import "@/styles/globals.css";
 
@@ -30,7 +31,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <GlosPoliceBand>{children}</GlosPoliceBand>
+        <FacebookProvider>
+          <GlosPoliceBand>{children}</GlosPoliceBand>
+        </FacebookProvider>
       </body>
     </html>
   );
