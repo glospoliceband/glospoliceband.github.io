@@ -1,4 +1,4 @@
 export { CdCover } from "./CdCover";
 export { FindUsOnFacebook } from "./FindUsOnFacebook";
-export { GlosPoliceBand_20161114 } from "./GlosPoliceBand_20161114";
-export { GlosPoliceBand_20251011 } from "./GlosPoliceBand_20251011";
+export { GlosPoliceBand20161114 } from "./GlosPoliceBand20161114";
+export { GlosPoliceBand20251011 } from "./GlosPoliceBand20251011";

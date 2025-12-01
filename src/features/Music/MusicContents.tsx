@@ -11,8 +11,8 @@ export const MusicContents = () => (
       </tr>
     </thead>
     <tbody>
-      {musicDatabase.map((piece, key) => (
-        <tr key={key}>
+      {musicDatabase.map((piece) => (
+        <tr key={piece.number}>
           <td>
             <p>{piece.number}</p>
           </td>
