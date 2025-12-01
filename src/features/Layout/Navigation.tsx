@@ -25,10 +25,10 @@ export const Navigation = () => {
       <Link href="/" className="font-small text-xl md:font-medium md:text-2xl">
         Gloucestershire Police Band
       </Link>
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <NavigationMenu navigation={navigation} />
       </div>
-      <div className="hidden md:flex">
+      <div className="hidden lg:flex">
         <NavigationBar
           currentPathname={currentPathname}
           navigation={navigation}
