@@ -9,6 +9,7 @@ export const Vacancies = () => (
 
     <p>We are currently looking to fill the following positions:</p>
     <ul>
+      <li>Euphonium</li>
       <li>Front Row Cornet</li>
       <li>Solo Horn</li>
       <li>Soprano Cornet</li>
