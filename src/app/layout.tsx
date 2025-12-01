@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
 import { FacebookProvider } from "@/features/Facebook";
 import { GlosPoliceBand } from "@/features/Layout";
 import "@/styles/globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Gloucestershire Police Band",
@@ -23,18 +20,18 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body>
-        <FacebookProvider>
-          <GlosPoliceBand>{children}</GlosPoliceBand>
-        </FacebookProvider>
-      </body>
-    </html>
-  );
-}
+}>) => (
+  <html lang="en">
+    <body>
+      <FacebookProvider>
+        <GlosPoliceBand>{children}</GlosPoliceBand>
+      </FacebookProvider>
+    </body>
+  </html>
+);
+
+export default RootLayout;

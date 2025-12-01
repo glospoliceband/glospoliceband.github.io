@@ -73,17 +73,15 @@ const TRACKS = [
   },
 ];
 
-export const TrackListing = () => {
-  return (
-    <ol>
-      {TRACKS.map((track, key) => (
-        <Track
-          key={key}
-          number={track.number}
-          name={track.name}
-          composer={track.composer}
-        />
-      ))}
-    </ol>
-  );
-};
+export const TrackListing = () => (
+  <ol>
+    {TRACKS.map((track) => (
+      <Track
+        key={track.number}
+        number={track.number}
+        name={track.name}
+        composer={track.composer}
+      />
+    ))}
+  </ol>
+);
