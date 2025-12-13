@@ -27,6 +27,15 @@ export const MainPageText = () => (
     </p>
 
     <p>
+      The band currently has vacancies for Principal Euphonium, Soprano and
+      Front Row Cornet. If you would like to come along and try out with the
+      band, please contact us and we will be pleased to welcome you at one of
+      our Thursday evening rehearsals. If you do not have an instrument, please
+      let us know in advance, as the band has various instruments, and we will
+      be able to check availability for whatever is required.
+    </p>
+
+    <p>
       For more information or to book the band for your event, please contact
       the band secretary at{" "}
       <a href="mailto: secretary@glospoliceband.org">
