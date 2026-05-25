@@ -15,16 +15,18 @@ For more details see the following:
 
 ## Useful Commands
 
+Now uses pnpm rather than npm.
+
 Run Next.js in development mode:
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 Check code quality:
 
 ```bash
-npm run lint
+pnpm lint
 ```
 
 Check and fix code layout:
@@ -37,11 +39,11 @@ npm run prettier:fix
 Build the web site:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 Deploy the website:
 
 ```bash
-npm run deploy -- -m "<Description of changes being deployed>"
+pnpm deploy -- -m "<Description of changes being deployed>"
 ```
